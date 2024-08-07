@@ -82,12 +82,12 @@ const LocationUser = () => {
                                 <Text style={styles.collectingText}>Collecting</Text>
                             </TouchableOpacity>
                             <View style={styles.etaContainer}>
-                                <Text style={styles.etaLabel}>ETA</Text>
+                                <Text style={styles.etaLabel}>ETA </Text>
                                 <Text style={styles.etaValue}>50 min</Text>
                             </View>
                         </View>
                     </View>
-                    <View style={styles.cardBody}>
+                    <View>
                         <ChildItem Icon={<EnvironmentOutline />} text="Store West" />
                         <ChildItem Icon={<CalendarOutline />} text="1 - 3 pm, July 3" />
                         <ChildItem Icon={<TruckOutline />} text="10 Orders" />
@@ -110,11 +110,11 @@ const LocationUser = () => {
 
                 <View style={styles.locationContainer}>
                     <View>
-                        <Text style={styles.lastText}>Last Latitude:</Text>
+                        <Text style={styles.lastText}>Last Latitude</Text>
                         <Text>{location?.coords.latitude}</Text>
                     </View>
                     <View>
-                        <Text style={styles.lastText}>Last Longitude:</Text>
+                        <Text style={styles.lastText}>Last Longitude</Text>
                         <Text>{location?.coords.longitude}</Text>
                     </View>
                 </View>
@@ -126,7 +126,7 @@ const LocationUser = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#fafbfc',
     },
     header: {
         height: 104,
@@ -147,19 +147,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 10,
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.8,
-        shadowRadius: 2,
-        elevation: 1,
+        shadowRadius: 20,
+        elevation: 5,
     },
     cardHeader: {
         flexDirection: 'row',
-        alignItems: 'center',
-        gap: 10
+        justifyContent: 'flex-start',
+        gap: 13
     },
     profileImage: {
-        width: 50,
-        height: 50,
+        width: 45,
+        height: 45,
         borderRadius: 25,
         objectFit: 'cover'
     },
@@ -169,11 +169,13 @@ const styles = StyleSheet.create({
     },
     cardTitle: {
         fontWeight: '400',
-        color: '#939496'
+        color: '#939496',
+        fontSize: 10
     },
     cardSubtitle: {
         color: '#38383E',
         fontWeight: '400',
+        fontSize: 11
     },
     iconButtons: {
         flexDirection: 'row',
@@ -181,8 +183,8 @@ const styles = StyleSheet.create({
     },
     iconButton: {
         backgroundColor: '#EBDD4C',
-        width: 32,
-        height: 32,
+        width: 42,
+        height: 42,
         borderRadius: 100,
         alignItems: 'center',
         justifyContent: 'center'
@@ -195,12 +197,13 @@ const styles = StyleSheet.create({
         gap: 1,
         borderRadius: 50,
         position: 'absolute',
-        left: 0,
-        bottom: 0,
+        left: 10,
+        bottom: -2,
         right: 0,
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        width: 25
     },
     ratingText: {
         fontSize: 8.1
@@ -210,11 +213,9 @@ const styles = StyleSheet.create({
     },
     collectingButton: {
         backgroundColor: '#E2F8FF',
-        borderRadius: 10,
-        flex: 1,
+        borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 20,
     },
     collectingText: {
         color: '#2CCCFF',
@@ -232,9 +233,6 @@ const styles = StyleSheet.create({
     etaValue: {
         color: '#38383E'
     },
-    cardBody: {
-        marginVertical: 10,
-    },
     bodyText: {
         marginVertical: 2,
         fontSize: 14,
@@ -245,17 +243,17 @@ const styles = StyleSheet.create({
     },
     cardFooter: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        marginTop: 11
     },
     labelsContainer: {
         flexDirection: 'row',
-        gap: 10,
+        gap: 16,
         marginTop: 20
     },
     labelsButton: {
         padding: 10,
         backgroundColor: '#EBDD4C',
-        borderRadius: 5,
+        borderRadius: 10,
         alignItems: 'center',
         flex: 2,
         flexDirection: 'row',
@@ -264,7 +262,9 @@ const styles = StyleSheet.create({
         gap: 10,
     },
     labelsButtonText: {
-        color: '#fff',
+        color: '#38383E',
+        fontWeight: '700',
+        fontSize: 14
     },
     locationContainer: {
         flexDirection: 'row',
@@ -282,20 +282,23 @@ const styles = StyleSheet.create({
     moreButton: {
         padding: 10,
         backgroundColor: '#FAFBFC',
-        borderRadius: 5,
+        borderRadius: 10,
         borderWidth: 1,
-        borderColor: '#E1E1E3',
+        borderColor: '#939496',
         flexDirection: 'row',
         gap: 2,
         alignItems: 'center',
+        justifyContent: 'center',
+        width: 40
     },
     cardItem: {
         flexDirection: 'row',
-        flex: 2,
+        flex: 3,
         alignItems: 'center',
         backgroundColor: '#FAFBFC',
         padding: 5,
-        borderRadius: 100
+        borderRadius: 100,
+        height: 50
     }
 });
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { TouchableOpacity, Text, StyleSheet, ViewStyle } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, ViewStyle, View } from 'react-native';
 
 interface CustomButtonProps {
     Icon: ReactNode;
@@ -18,19 +18,19 @@ const CustomButton: React.FC<CustomButtonProps> = ({ Icon, text, style }) => {
 
 const styles = StyleSheet.create({
     button: {
-        padding: 10,
         backgroundColor: '#FAFBFC',
         borderRadius: 5,
         borderWidth: 1,
         borderColor: '#E1E1E3',
         flexDirection: 'row',
         alignItems: 'center',
-        flex: 1,
-        marginHorizontal: 5,
+        marginRight: 5,
+        padding: 5,
     },
     buttonText: {
         color: '#38383E',
         marginLeft: 5,
+        fontSize: 10,
     },
 });
 
